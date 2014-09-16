@@ -1,0 +1,409 @@
+<!doctype html>
+<html lang="us">
+<head>
+	<meta charset="utf-8">
+	<title>TMA Time Entry Page</title>
+	<link href="bootstrap-3.1.1-dist/css/bootstrap.css" rel="stylesheet">
+        <link href="bootstrap-3.1.1-dist/css/bootstrap-theme.css" rel="stylesheet">
+        <script src="jquery-2.1.1.js"></script>
+	<script src="bootstrap-3.1.1-dist/js/bootstrap.js"></script>
+        
+	
+ <script type="text/javascript">
+        function CloseThis() {
+           var win = window.open('', '_self');
+           window.close();
+           win.close(); return false;
+             }
+ </script>    
+	
+
+</head>
+<body>
+<!-- Header Section -->
+ <h1><img src="images/logoDOS_CA.jpg" alt="Smiley face" width="75" height="75">Time Managment Application</h1>
+  <div class="TMAHome">
+    <nav id="navbar-TMA" class="navbar navbar-default navbar-static" role="navigation">
+      <div class="container-fluid">        
+        <div class="navbar-header">
+          <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-example-js-navbar-collapse">
+            <span class="sr-only">Toggle navigation</span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>          
+          <a class="navbar-brand" href="Home.HTM">Home</a>
+          <a class="navbar-brand" href="TimeEntry.HTM">Time Entry</a>
+          <a class="navbar-brand" href="UserProfile.HTM">User Profile</a>
+          <a class="navbar-brand" href="Reporting.HTM">Reporting</a>
+          <a class="navbar-brand" href="Admin.HTM">Administrator</a>
+        </div>
+          <ul class="nav navbar-nav navbar-right">              
+            <button type="button" onclick="CloseThis()">Log Off</button>
+          </ul>
+        </div><!-- /.nav-close -->
+      </div><!-- /.container-fluid -->
+    </nav> <!-- /navbar-TMA -->
+  </div> <!-- /TMAHome -->
+
+<FORM-TMA>
+
+<h3><div class="container">    
+          <label for="txDate">Enter the date of the activities.</label>
+          <input type="date" class="form-control" id="txDate" required autofocus autocomplete="on">
+          <span class="help-block"></span>
+        <button class="btn btn-lg btn-primary btn-block"onClick="history.go(0)"type="Clear">Reset Form Data</button> 
+        <button class="btn btn-lg btn-primary btn-block" type="submit">Submit Data</button>             
+        </div></h3>
+
+<div id="tabs">
+   <ul id="myTab" class="nav nav-tabs">
+
+    
+     <li class="active"><a href="#tabs-1" data-toggle="tab">NIV</a></li>
+     <li><a href="#tabs-2" data-toggle="tab">IV</a></li>
+     <li><a href="#tabs-3" data-toggle="tab">PPT</a></li>
+     <li><a href="#tabs-4" data-toggle="tab">SCS</a></li>
+     <li><a href="#tabs-5" data-toggle="tab">OUTREACH/MGMT</a></li>
+     <li><a href="#tabs-6" data-toggle="tab">TRNG/OTHER</a></li>     
+     
+   </ul>  
+<div id="myTabContent" class="tab-content">
+   <div class="tab-pane fade in active" id="tabs-1">
+     <h3>Hours worked for each NIV activity to be entered daily in increments of 15 min.(1/4 Hour or .25)</h3>
+     <p>(For example 1 hour 15 min would be entered as 1.25 hours.)</p>     
+
+        <div class="form-TMA">
+          <label for="NIV Processing">Hours Spent NIV Processing?</label>
+          <input type="number" class="form-control" id="NIV_Proc" placeholder="0" min="0" max="24">
+          <span class="help-block"></span>
+          <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>        
+
+        <div class="form-TMA">
+          <label for="NIV Management">Hours Spent NIV Management?</label>
+          <input type="number" class="form-control" id="NIV_Mgmt" placeholder="0" min="0" max="24">
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Comments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="NIV/GSS Mgmt">Hours Spent NIV/GSS Management?</label>
+          <input type="number" class="form-control" id="NIV_GSS_Mgmt" placeholder="0" min="0" max="24">
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Comments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="NIV Fraud Prevention">Hours Spent NIV Fraud Prevention?</label>
+          <input type="number" class="form-control" id="NIV_Fra_Prev" placeholder="0" min="0" max="24">
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Comments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="NIV Public Inquiries">Hours Spent NIV Public Inquiries?</label>
+          <input type="number" class="form-control" id="NIV_Pub_Inq" placeholder="0" min="0" max="24">
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="NIV Congressional Inquiries">Hours Spent NIV Congressional Inquiries?</label>
+          <input type="number" class="form-control" id="NIV_Cong_Inq" placeholder="0" min="0" max="24">
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="NIV Clerical">Hours Spent NIV Clerical?</label>
+          <input type="number" class="form-control" id="NIV_Cler" placeholder="0" min="0" max="24">
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="NIV Processing">Hours Spent NIV Cashier?</label>
+          <input type="number" class="form-control" id="NIV_Cash" placeholder="0" min="0" max="24">
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="NIV Processing">Hours Spent NIV Representation?</label>
+          <input type="number" class="form-control" id="NIV_Rep" placeholder="0" min="0" max="24">
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+   </div>
+
+
+   <div class="tab-pane fade " id="tabs-2">
+          <h3>Hours worked for each IV activity to be entered daily in increments of 15 min.</h3>
+     <p>(For example 1 hour 15 min would be entered as 1.25 hours.)</p>
+
+
+        <div class="form-TMA">
+          <label for="IV Processing">Hours Spent IV Processing?</label>
+          <input type="number" class="form-control" id="IV_Proc" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="IV Management">Hours Spent IV Management?</label>
+          <input type="number" class="form-control" id="IV_Mgmt" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="IV/GSS Mgmt">Hours Spent IV/GSS Management?</label>
+          <input type="number" class="form-control" id="IV_GSS_Mgmt" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="IV Fraud Prevention">Hours Spent IV Fraud Prevention?</label>
+          <input type="number" class="form-control" id="IV_Fra_Prev" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="IV Public Inquiries">Hours Spent IV Public Inquiries?</label>
+          <input type="number" class="form-control" id="IV_Pub_Inq" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="IV Congressional Inquiries">Hours Spent IV Congressional Inquiries?</label>
+          <input type="number" class="form-control" id="IV_Cong_Inq" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="IV Clerical">Hours Spent IV Clerical?</label>
+          <input type="number" class="form-control" id="IV_Cler" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="IV Processing">Hours Spent IV Cashier?</label>
+          <input type="number" class="form-control" id="IV_Cash" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="IV Processing">Hours Spent IV Representation?</label>
+          <input type="number" class="form-control" id="IV_Rep" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+     </div>
+   
+
+
+    <div class="tab-pane fade "  id="tabs-3">     
+     <h3>Hours worked for each PPT activity to be entered daily in increments of 15 min.</h3>
+     <p>(For example 1 hour 15 min would be entered as 1.25 hours.)</p>
+
+        <div class="form-TMA">
+          <label for="PPT Processing">Hours Spent PPT Processing?</label>
+          <input type="number" class="form-control" id="PPT_Proc" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="PPT Management">Hours Spent PPT Management?</label>
+          <input type="number" class="form-control" id="PPT_Mgmt" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="PPT/GSS Mgmt">Hours Spent PPT/GSS Management?</label>
+          <input type="number" class="form-control" id="PPT_GSS_Mgmt" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="PPT Fraud Prevention">Hours Spent PPT Fraud Prevention?</label>
+          <input type="number" class="form-control" id="PPT_Fra_Prev" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="PPT Public Inquiries">Hours Spent PPT Public Inquiries?</label>
+          <input type="number" class="form-control" id="PPT_Pub_Inq" placeholder="0" min="0" max="24">
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="PPT Congressional Inquiries">Hours Spent PPT Congressional Inquiries?</label>
+          <input type="number" class="form-control" id="PPT_Cong_Inq" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="PPT Clerical">Hours Spent PPT Clerical?</label>
+          <input type="number" class="form-control" id="PPT_Cler" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="PPT Processing">Hours Spent PPT Cashier?</label>
+          <input type="number" class="form-control" id="PPT_Cash" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="PPT Processing">Hours Spent PPT Representation?</label>
+          <input type="number" class="form-control" id="PPT_Rep" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+     </div>
+
+     
+     <div  class="tab-pane fade " id="tabs-4">     
+     <h3>Hours worked for each SCS activity to be entered daily in increments of 15 min.</h3>
+     <p>(For example 1 hour 15 min would be entered as 1.25 hours.)</p>
+
+        <div class="form-TMA">
+          <label for="SCS Processing">Hours Spent SCS Processing?</label>
+          <input type="number" class="form-control" id="SCS_Proc" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="SCS Management">Hours Spent SCS Management?</label>
+          <input type="number" class="form-control" id="SCS_Mgmt" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="SCS/GSS Mgmt">Hours Spent SCS/GSS Management?</label>
+          <input type="number" class="form-control" id="SCS_GSS_Mgmt" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="SCS Fraud Prevention">Hours Spent SCS Fraud Prevention?</label>
+          <input type="number" class="form-control" id="SCS_Fra_Prev" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="SCS Public Inquiries">Hours Spent SCS Public Inquiries?</label>
+          <input type="number" class="form-control" id="SCS_Pub_Inq" placeholder="0" min="0" max="24">
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="SCS Congressional Inquiries">Hours Spent SCS Congressional Inquiries?</label>
+          <input type="number" class="form-control" id="SCS_Cong_Inq" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="SCS Clerical">Hours Spent SCS Clerical?</label>
+          <input type="number" class="form-control" id="SCS_Cler" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="SCS Processing">Hours Spent SCS Cashier?</label>
+          <input type="number" class="form-control" id="SCS_Cash" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="SCS Processing">Hours Spent SCS Representation?</label>
+          <input type="number" class="form-control" id="SCS_Rep" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+     </div> 
+             
+   
+   <div class="tab-pane fade "  id="tabs-5">
+     <h3>Hours worked for each OUTREACH and Managment activity to be entered daily in increments of 15 min.</h3>
+     <p>(For example 1 hour 15 min would be entered as 1.25 hours.)</p>
+
+
+        <div class="form-TMA">
+          <label for="OUTR Customer Outreach">Hours Spent OUTR Customer Outreach?</label>
+          <input type="number" class="form-control" id="OUTR_Cust_Outr" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="OUTR Social Media Updates">Hours Spent OUTR Social Media Updates?</label>
+          <input type="number" class="form-control" id="OUTR_Soc_Med_Upd" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="OUTR Other Media Outreach">Hours Spent OUTR Other Media Outreach?</label>
+          <input type="number" class="form-control" id="OUTR_Oth_Med_Outr" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+  
+        <div class="form-TMA">
+          <label for="MGMT Supervisory Tasks">Hours Spent MGMT Supervisory Tasks?</label>
+          <input type="number" class="form-control" id="MGMT_Supe_Task" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="MGMT Country Team">Hours Spent MGMT Country Team?</label>
+          <input type="number" class="form-control" id="MGMT_Country_Team" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="MGMT EAC">Hours Spent MGMT EAC?</label>
+          <input type="number" class="form-control" id="MGMT_EAC" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="MGMT ICASS">Hours Spent MGMT ICASS?</label>
+          <input type="number" class="form-control" id="MGMT_ICASS" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="MGMT Representational">Hours Spent MGMT Representational?</label>
+          <input type="number" class="form-control" id="MGMT_Rep" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+   </div>
+
+   <div class="tab-pane fade "  id="tabs-6">
+    <h3>Hours worked for each TRAINING or OTHER activity to be entered daily in increments of 15 min.</h3>
+     <p>(For example 1 hour 15 min would be entered as 1.25 hours.)</p>
+
+
+        <div class="form-TMA">
+          <label for="TRNG Training Received">Hours Spent TRNG Training Received?</label>
+          <input type="number" class="form-control" id="TRNG_Train_Rec" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="TRNG Training Conducted">Hours Spent TRNG Training Conducted?</label>
+          <input type="number" class="form-control" id="TRNG_Train_Con" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="OTH Detail(Non-CA)">Hours Spent OTHER (NON-CA) activities?</label>
+          <input type="number" class="form-control" id="OTH_Non_CA)" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="OTH Leave">Hours Spent OTH Leave?</label>
+          <input type="number" class="form-control" id="OTH_Leave" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+        <div class="form-TMA">
+          <label for="SOGA Processing">Hours Spent Other Government Agency Processing?</label>
+          <input type="number" class="form-control" id="SOGA_Proc" placeholder="0" min="0" max="24" >
+          <span class="help-block"></span>
+        <input type="text" class="form-control" id="Coments" placeholder="Optional Coments"></div>
+
+
+   </div>
+     
+</div>
+
+</body>
+</html>
